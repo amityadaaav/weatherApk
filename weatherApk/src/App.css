@@ -1,0 +1,96 @@
+/* Background covering whole viewport */
+.app-background {
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Card container */
+.main-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+  width: 320px;
+  text-align: center;
+  
+  /* Animation */
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+/* Fade & scale animation */
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Input styling */
+.input-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"] {
+  padding: 12px 15px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #2980b9;
+  box-shadow: 0px 0px 8px rgba(41, 128, 185, 0.5);
+}
+
+/* Button styling */
+button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2575a7, #5ec7e7);
+  transform: translateY(-2px);
+}
+
+/* Weather info */
+.weather-info {
+  margin-top: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 15px;
+  animation: fadeIn 0.5s ease;
+}
+
+.weather-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weather-info p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Simple fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
